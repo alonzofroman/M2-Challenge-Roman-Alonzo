@@ -1,7 +1,9 @@
 package com.company.MonthAndMath.models;
 
+import javax.persistence.Table;
 import java.util.Objects;
 
+@Table(name="months")
 public class Month {
     private String name;
     private Integer number;
