@@ -12,7 +12,7 @@
 	<artifactId>MonthAndMath</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MonthAndMath</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Month Converter and Calculator API</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -21,7 +21,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -31,12 +30,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.5.1</version>
 		</dependency>
 	</dependencies>
 
