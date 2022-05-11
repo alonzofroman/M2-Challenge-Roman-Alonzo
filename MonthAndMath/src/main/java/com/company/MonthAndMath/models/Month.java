@@ -2,6 +2,7 @@ package com.company.MonthAndMath.models;
 
 import javax.persistence.Table;
 import java.util.Objects;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Table(name="months")
 public class Month {
@@ -11,6 +12,9 @@ public class Month {
     public Month(String name, Integer number) {
         this.name = name;
         this.number = number;
+    }
+
+    public Month() {
     }
 
     public String getName() {
@@ -40,5 +44,10 @@ public class Month {
     @Override
     public int hashCode() {
         return Objects.hash(name, number);
+    }
+
+    public static int getRandom() {
+        int randomNumber = ThreadLocalRandom.current().nextInt(1, 12 + 1);
+        return randomNumber;
     }
 }

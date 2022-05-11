@@ -1,12 +1,16 @@
 package com.company.MonthAndMath.controllers;
 
-import com.company.MonthAndMath.models.Month;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import com.company.MonthAndMath.models.Month;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
 public class MonthController {
@@ -26,14 +30,20 @@ public class MonthController {
             new Month("December", 12)
     ));
 
+//    Get month by number
     @RequestMapping(value="/month/{number}", method=RequestMethod.GET)
     @ResponseStatus(value= HttpStatus.OK)
     public Month getMonthByID(@PathVariable Integer number) {
-        return monthList.get(number);
+        return monthList.get(number-1);
     }
 
-
-
+//Get random month
+    @RequestMapping(value="/randomMonth", method=RequestMethod.GET)
+    @ResponseStatus(value=HttpStatus.OK)
+    public Month getRandomMonth() {
+        int randomNumber = Month.getRandom();
+        return monthList.get(randomNumber);
+    }
 
 
 }
