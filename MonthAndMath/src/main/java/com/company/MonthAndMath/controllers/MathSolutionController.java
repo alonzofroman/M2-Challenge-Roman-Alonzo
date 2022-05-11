@@ -12,6 +12,23 @@ public class MathSolutionController {
     public MathSolution getAddSolution(@RequestBody MathSolution mathSolution) {
             mathSolution.add();
         return mathSolution;
+    }
 
+    @PostMapping(value="/subtract")
+    public MathSolution getSubtractSolution(@RequestBody MathSolution mathSolution) {
+        mathSolution.subtract();
+        return mathSolution;
+    }
+
+    @PostMapping(value="/multiply")
+    public MathSolution getMultiplySolution(@RequestBody MathSolution mathSolution) {
+        mathSolution.multiply();
+        return mathSolution;
+    }
+
+    @PostMapping(value="/divide")
+    public MathSolution getDivideSolution(@RequestBody MathSolution mathSolution) {
+        mathSolution.divide();
+        return mathSolution;
     }
 }
