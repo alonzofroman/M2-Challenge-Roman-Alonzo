@@ -7,16 +7,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class MathSolutionController {
 
-//    private static MathSolution mathObject = new MathSolution();
 
-//    @RequestMapping(value="/add", method= RequestMethod.POST)
-//    @ResponseBody
     @PostMapping(value="/add")
     public MathSolution getAddSolution(@RequestBody MathSolution mathSolution) {
-
-//        MathSolution mathObject = new MathSolution(operand1, operand2);
-//         mathObject.add();
-//         return mathObject;
+            mathSolution.add();
         return mathSolution;
 
     }

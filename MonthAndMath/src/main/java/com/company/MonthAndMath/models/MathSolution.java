@@ -52,41 +52,33 @@ public class MathSolution {
     }
 
 
-
     public MathSolution() {
     }
 
-    //    Methods
-//    public void add(int operand1, int operand2, String operation) {
-//        this.setOperation(operation);
-//        if (this.operation == "add") {
-//            int sum = operand1 + operand2;
-//            this.setOperand1(operand1);
-//            this.setOperand2(operand2);
-//            this.setAnswer(sum);
-//        }
-//    }
-//
+
     public void add() {
         this.operation = "add";
             int sum = operand1 + operand2;
             this.answer = sum;
     }
 
-
-
-    public static int subtract(Integer operand1, Integer operand2) {
-        int answer = operand1 - operand2;
-        return answer;
+    public void subtract() {
+        this.operation = "subtract";
+        int difference = operand1 - operand2;
+        this.answer = difference;
     }
 
-    public static int multiply(Integer operand1, Integer operand2) {
-        int answer = operand1 * operand2;
-        return answer;
+    public void multiply() {
+        this.operation = "multiply";
+        int product = operand1 * operand2;
+        this.answer = product;
     }
 
-    public static int divide(Integer operand1, Integer operand2) {
-        int answer = operand1 / operand2;
-        return answer;
+    public void divide() {
+        this.operation = "divide";
+        int quotient = operand1 / operand2;
+        this.answer = quotient;
     }
+
+
 }
