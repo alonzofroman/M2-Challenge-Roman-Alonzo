@@ -1,11 +1,8 @@
 package com.company.MonthAndMath.controllers;
 
 import com.company.MonthAndMath.models.MathSolution;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
-import javax.validation.ValidationException;
+
 
 @RestController
 public class MathSolutionController {

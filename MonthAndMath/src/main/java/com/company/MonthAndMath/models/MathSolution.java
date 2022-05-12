@@ -4,13 +4,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 public class MathSolution {
-//    @NotNull
-//    @NotEmpty
     private Integer operand1;
-//    @NotNull
-//    @NotEmpty
     private Integer operand2;
-
     private Integer answer;
     private String operation;
 
@@ -66,7 +61,7 @@ public class MathSolution {
 
 
 
-
+//Methods
 
     public void add() {
         this.operation = "add";

@@ -43,12 +43,9 @@ public class MonthControllerTest {
 
     @Test
     public void shouldReturnARandomMonth() throws Exception {
-
-
         mockMvc.perform(get("/randomMonth"))
                 .andDo(print())
                 .andExpect(status().isOk());
-
     }
 
 
