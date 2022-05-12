@@ -1,45 +1,58 @@
 package com.company.MonthAndMath.models;
 
-public class MathSolution {
-    private int operand1;
-    private int operand2;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
-    private int answer;
+public class MathSolution {
+//    @NotNull
+//    @NotEmpty
+    private Integer operand1;
+//    @NotNull
+//    @NotEmpty
+    private Integer operand2;
+
+    private Integer answer;
     private String operation;
 
-    public MathSolution(int operand1, int operand2) {
+    public MathSolution() {
+    }
+
+    public MathSolution(Integer operand1) {
+        this.operand1 = operand1;
+    }
+    public MathSolution(Integer operand1, Integer operand2) {
         this.operand1 = operand1;
         this.operand2 = operand2;
     }
 
-    public MathSolution(int operand1, int operand2, int answer, String operation) {
+    public MathSolution(Integer operand1, Integer operand2, Integer answer, String operation) {
         this.operand1 = operand1;
         this.operand2 = operand2;
         this.answer = answer;
         this.operation = operation;
     }
 
-    public int getOperand1() {
+    public Integer getOperand1() {
         return operand1;
     }
 
-    public void setOperand1(int operand1) {
+    public void setOperand1(Integer operand1) {
         this.operand1 = operand1;
     }
 
-    public int getOperand2() {
+    public Integer getOperand2() {
         return operand2;
     }
 
-    public void setOperand2(int operand2) {
+    public void setOperand2(Integer operand2) {
         this.operand2 = operand2;
     }
 
-    public int getAnswer() {
+    public Integer getAnswer() {
         return answer;
     }
 
-    public void setAnswer(int answer) {
+    public void setAnswer(Integer answer) {
         this.answer = answer;
     }
 
@@ -52,31 +65,30 @@ public class MathSolution {
     }
 
 
-    public MathSolution() {
-    }
+
 
 
     public void add() {
         this.operation = "add";
-            int sum = operand1 + operand2;
+        Integer sum = operand1 + operand2;
             this.answer = sum;
     }
 
     public void subtract() {
         this.operation = "subtract";
-        int difference = operand1 - operand2;
+        Integer difference = operand1 - operand2;
         this.answer = difference;
     }
 
     public void multiply() {
         this.operation = "multiply";
-        int product = operand1 * operand2;
+        Integer product = operand1 * operand2;
         this.answer = product;
     }
 
     public void divide() {
         this.operation = "divide";
-        int quotient = operand1 / operand2;
+        Integer quotient = operand1 / operand2;
         this.answer = quotient;
     }
 
