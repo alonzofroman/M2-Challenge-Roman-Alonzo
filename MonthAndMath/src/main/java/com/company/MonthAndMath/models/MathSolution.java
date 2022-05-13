@@ -1,8 +1,5 @@
 package com.company.MonthAndMath.models;
 
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-
 public class MathSolution {
     private Integer operand1;
     private Integer operand2;
